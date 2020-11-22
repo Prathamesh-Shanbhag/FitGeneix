@@ -6,9 +6,12 @@
 
     <title>Fitgeneix || Fitness</title>
     <!-- fontawesome icons  -->
-    <link rel="stylesheet" href="fontawesome-free-5.14.0-web/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="./assets/fontawesome-free-5.14.0-web/css/all.min.css"
+    />
     <!-- styles -->
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
     <!-- favicon  -->
     <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
   </head>
@@ -17,13 +20,13 @@
     <!-- <<<<<<header>>>>>> -->
     <header id="home">
       <!-- <<<<<<navbar>>>>>> -->
-      <nav class="navbar">
+      <nav class="navbar" id="nav">
         <div class="nav-center">
           <!-- nav header  -->
           <div class="nav-header">
             <a href="#home">
               <img
-                src="./images/logo.svg"
+                src="./assets/images/logo.svg"
                 alt="Fitgeneixlogo"
                 class="nav-logo"
               />
@@ -39,12 +42,17 @@
           </div>
           <!-- end of navbar header  -->
           <!-- navbar links  -->
-          <div class="nav-links" id="nav-links">
-            <a href="#home" class="nav-link scroll-link">Home</a>
-            <a href="#motivation" class="nav-link scroll-link">Motivation</a>
-            <a href="#programs" class="nav-link scroll-link">Programs</a>
-            <a href="#courses" class="nav-link scroll-link">Courses</a>
-            <a href="#workouts" class="nav-link scroll-link">Workouts</a>
+          <div class="links-container">
+            <div class="nav-links">
+              <a href="#home" class="nav-link scroll-link">Home</a>
+              <a href="./diet/pages/mainpage.html" class="nav-link scroll-link"
+                >Diet</a
+              >
+              <a href="./store.html" class="nav-link scroll-link">Store</a>
+              <a href="./diet/pages/signin.html" class="nav-link scroll-link"
+                >Login</a
+              >
+            </div>
           </div>
           <!-- end of nav bar links  -->
           <!-- nav social  -->
@@ -66,7 +74,7 @@
       <!-- <<<<<<hero component>>>>>> -->
       <!-- hero video  -->
       <video id="videoBG" autoplay muted loop>
-        <source src="./hero-component.mp4" type="video/mp4" />
+        <source src="./assets/hero-component.mp4" type="video/mp4" />
       </video>
       <!-- end of hero video  -->
       <div class="hero">
@@ -91,48 +99,65 @@
       <div class="section-center services-center">
         <!-- Single Card -->
         <article class="services-card">
-          <div class="services-box">
-            <div class="card-content">
-              <h2 class="card-number">01</h2>
-              <h3 class="card-title">Card One</h3>
-              <p class="card-text">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae
-                nemo impedit suscipit perspiciatis illum tempora explicabo
-                reiciendis natus commodi quis?
-              </p>
-              <a class="card-btn" href="#">Read More</a>
+          <div class="serv-container">
+            <div class="services-box-front">
+              <div class="card-content">
+                <!-- <h2 class="card-number">01</h2> -->
+                <h3 class="card-title">Training Program</h3>
+                <a class="card-btn" href="#">Hover for More</a>
+              </div>
+            </div>
+            <div class="services-box-back">
+              <div class="card-content">
+                <p class="card-text">
+                  Full-body workouts designed to build strength and endurance,
+                  using the energy of the group and the expertise of the
+                  certified personal trainer with sanitized equipment and
+                  machinery to maximize your results.
+                </p>
+              </div>
             </div>
           </div>
         </article>
         <!-- End OF Single Card -->
         <!-- Single Card -->
         <article class="services-card">
-          <div class="services-box">
-            <div class="card-content">
-              <h2 class="card-number">02</h2>
-              <h3 class="card-title">Card Two</h3>
-              <p class="card-text">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae
-                nemo impedit suscipit perspiciatis illum tempora explicabo
-                reiciendis natus commodi quis?
-              </p>
-              <a class="card-btn" href="#">Read More</a>
+          <div class="serv-container">
+            <div class="services-box-front">
+              <div class="card-content">
+                <!-- <h2 class="card-number">02</h2> -->
+                <h3 class="card-title">Personalized Diet Program</h3>
+                <a class="card-btn" href="#">Hover for More</a>
+              </div>
+            </div>
+            <div class="services-box-back">
+              <div class="card-content">
+                <p class="card-text">
+                  Our vast food database gives you complete calories and macros
+                  details of all your favourite foods.
+                </p>
+              </div>
             </div>
           </div>
         </article>
         <!-- End OF Single Card -->
         <!-- Single Card -->
         <article class="services-card">
-          <div class="services-box">
-            <div class="card-content">
-              <h2 class="card-number">03</h2>
-              <h3 class="card-title">Card Three</h3>
-              <p class="card-text">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae
-                nemo impedit suscipit perspiciatis illum tempora explicabo
-                reiciendis natus commodi quis?
-              </p>
-              <a class="card-btn" href="#">Read More</a>
+          <div class="serv-container">
+            <div class="services-box-front">
+              <div class="card-content">
+                <!-- <h2 class="card-number">03</h2> -->
+                <h3 class="card-title">Customized Merchandise Store</h3>
+                <a class="card-btn" href="#">Hover for More</a>
+              </div>
+            </div>
+            <div class="services-box-back">
+              <div class="card-content">
+                <p class="card-text">
+                  World leader in sports equipment. Shop at Fitgeneix for 10000+
+                  products across 70+ Sports. Free shipping over $90.
+                </p>
+              </div>
             </div>
           </div>
         </article>
@@ -140,10 +165,60 @@
       </div>
     </section>
     <!-- end of services section  -->
+    <!-- ScrollTrigger facilities section  -->
+    <section class="section facilities clearfix">
+      <!-- title  -->
+      <div class="title-wrapper">
+        <h2 class="title">Our<span class="subtitle">Facilities</span></h2>
+      </div>
+      <!-- end of title  -->
+      <div class="facilities-center">
+        <!-- Single Card  -->
+        <article class="facility-card">
+          <h2 class="reveal title">Strength-Training Section</h2>
+          <h2 class="reveal sub-text">
+            "With Personal Trainers Available at All Times"
+          </h2>
+          <div class="facilities-container">
+            <img src="./assets/images/gym.jpg" alt="" class="facilities-img" />
+            <i class="fas fa-fire-alt detail-icon"></i>
+          </div>
+        </article>
+        <!-- Single Card  -->
+        <article class="facility-card">
+          <h2 class="reveal title">Indoor Swimming Pool</h2>
+          <h2 class="reveal sub-text">
+            "Open all day,and Safety Gear Available"
+          </h2>
+          <div class="facilities-container">
+            <img
+              src="./assets/images/swimming.jpg"
+              alt=""
+              class="facilities-img"
+            />
+            <i class="fas fa-swimmer detail-icon"></i>
+          </div>
+        </article>
+        <!-- Single Card  -->
+        <article class="facility-card">
+          <h2 class="reveal title">Spa</h2>
+          <h2 class="reveal sub-text">"For Relaxing your body"</h2>
+          <div class="facilities-container">
+            <img src="./assets/images/spa.jpg" alt="" class="facilities-img" />
+            <i class="fas fa-spa detail-icon"></i>
+          </div>
+        </article>
+      </div>
+      <!-- end of ScrollTrigger facilities section  -->
+    </section>
+    <!-- back to top button  -->
+    <a href="#home" class="scroll-link top-link">
+      <i class="fas fa-arrow-up"></i>
+    </a>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
 
-    <script src="main.js"></script>
+    <script src="./js/main.js"></script>
     <!-- ScrollTrigger -->
   </body>
 </html>
