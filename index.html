@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Fitgeneix || Fitness</title>
+    <!-- fontawesome icons  -->
+    <link rel="stylesheet" href="fontawesome-free-5.14.0-web/css/all.min.css" />
+    <!-- styles -->
+    <link rel="stylesheet" href="./styles.css" />
+    <!-- favicon  -->
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
+  </head>
+
+  <body>
+    <!-- <<<<<<header>>>>>> -->
+    <header id="home">
+      <!-- <<<<<<navbar>>>>>> -->
+      <nav class="navbar">
+        <div class="nav-center">
+          <!-- nav header  -->
+          <div class="nav-header">
+            <a href="#home">
+              <img
+                src="./images/logo.svg"
+                alt="Fitgeneixlogo"
+                class="nav-logo"
+              />
+            </a>
+            <button
+              type="button"
+              class="nav-toggle"
+              id="nav-toggle"
+              aria-label="nav-toggler"
+            >
+              <i class="fas fa-bars"></i>
+            </button>
+          </div>
+          <!-- end of navbar header  -->
+          <!-- navbar links  -->
+          <div class="nav-links" id="nav-links">
+            <a href="#home" class="nav-link scroll-link">Home</a>
+            <a href="#motivation" class="nav-link scroll-link">Motivation</a>
+            <a href="#programs" class="nav-link scroll-link">Programs</a>
+            <a href="#courses" class="nav-link scroll-link">Courses</a>
+            <a href="#workouts" class="nav-link scroll-link">Workouts</a>
+          </div>
+          <!-- end of nav bar links  -->
+          <!-- nav social  -->
+          <div class="nav-icons">
+            <a href="https://www.facebook.com" target="_blank">
+              <i class="fab fa-facebook nav-icon"></i>
+            </a>
+
+            <a href="https://www.twitter.com" target="_blank">
+              <i class="fab fa-twitter nav-icon"></i>
+            </a>
+
+            <a href="https://www.instagram.com" target="_blank">
+              <i class="fab fa-instagram nav-icon"></i>
+            </a>
+          </div>
+        </div>
+      </nav>
+      <!-- <<<<<<hero component>>>>>> -->
+      <!-- hero video  -->
+      <video id="videoBG" autoplay muted loop>
+        <source src="./hero-component.mp4" type="video/mp4" />
+      </video>
+      <!-- end of hero video  -->
+      <div class="hero">
+        <div class="hero-banner">
+          <h1 class="hero-title">
+            Achieve <span class="typed-text"></span>
+            <span class="cursor typing">&nbsp;</span>
+          </h1>
+          <p class="hero-text"></p>
+          <a href="#workouts" class="btn-white scroll-link">explore workouts</a>
+        </div>
+      </div>
+    </header>
+    <!-- <<<<<<end of header>>>>>> -->
+    <!-- <<<<<<<<services section>>>>>>  -->
+    <section class="section services clearfix" id="services">
+      <!-- title  -->
+      <div class="title-wrapper">
+        <h2 class="title">Our<span class="subtitle">services</span></h2>
+      </div>
+      <!-- end of title  -->
+      <div class="section-center services-center">
+        <!-- Single Card -->
+        <article class="services-card">
+          <div class="services-box">
+            <div class="card-content">
+              <h2 class="card-number">01</h2>
+              <h3 class="card-title">Card One</h3>
+              <p class="card-text">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae
+                nemo impedit suscipit perspiciatis illum tempora explicabo
+                reiciendis natus commodi quis?
+              </p>
+              <a class="card-btn" href="#">Read More</a>
+            </div>
+          </div>
+        </article>
+        <!-- End OF Single Card -->
+        <!-- Single Card -->
+        <article class="services-card">
+          <div class="services-box">
+            <div class="card-content">
+              <h2 class="card-number">02</h2>
+              <h3 class="card-title">Card Two</h3>
+              <p class="card-text">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae
+                nemo impedit suscipit perspiciatis illum tempora explicabo
+                reiciendis natus commodi quis?
+              </p>
+              <a class="card-btn" href="#">Read More</a>
+            </div>
+          </div>
+        </article>
+        <!-- End OF Single Card -->
+        <!-- Single Card -->
+        <article class="services-card">
+          <div class="services-box">
+            <div class="card-content">
+              <h2 class="card-number">03</h2>
+              <h3 class="card-title">Card Three</h3>
+              <p class="card-text">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae
+                nemo impedit suscipit perspiciatis illum tempora explicabo
+                reiciendis natus commodi quis?
+              </p>
+              <a class="card-btn" href="#">Read More</a>
+            </div>
+          </div>
+        </article>
+        <!-- End OF Single Card -->
+      </div>
+    </section>
+    <!-- end of services section  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
+
+    <script src="main.js"></script>
+    <!-- ScrollTrigger -->
+  </body>
+</html>
