@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DIET PLAN</title>
+
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="./styles.css">
+    
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Lobster"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700i"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: 'Roboto Condensed', sans-serif;
+        overflow-x: hidden;
+      }
+      /*body { background-image: url(ur.jpg);}*/
+      h1 {
+        margin: 150px auto 30px auto;
+        text-align: center;
+        color: #fff;
+      }
+
+      .hi-slide {
+        position: relative;
+        width: 754px;
+        height: 292px;
+        margin: 115px auto 0;
+      }
+
+      .hi-slide .hi-next,
+      .hi-slide .hi-prev {
+        position: absolute;
+        top: 50%;
+        width: 40px;
+        height: 40px;
+        margin-top: -20px;
+        border-radius: 50px;
+
+        line-height: 40px;
+        text-align: center;
+        cursor: pointer;
+        background-color: #fff;
+        color: black;
+        transition: all 0.6s;
+        font-size: 20px;
+        font-weight: bold;
+      }
+      .hi-slide .hi-next:hover,
+      .hi-slide .hi-prev:hover {
+        opacity: 1;
+        background-color: #fff;
+      }
+
+      .hi-slide .hi-prev {
+        left: -60px;
+      }
+
+      .hi-slide .hi-prev::before {
+        content: '<';
+      }
+      .hi-slide .hi-next {
+        right: -60px;
+      }
+      .hi-slide .hi-next::before {
+        content: '>';
+      }
+
+      .hi-slide > ul {
+        list-style: none;
+        position: relative;
+        width: 754px;
+        height: 292px;
+        margin: 0;
+        padding: 0;
+      }
+
+      .hi-slide > ul > li {
+        overflow: hidden;
+        position: absolute;
+        z-index: 0;
+        left: 377px;
+        top: 146px;
+        width: 0;
+        height: 0;
+        margin: 0;
+        padding: 0;
+        border: 3px solid #fff;
+        background-color: #333;
+        cursor: pointer;
+      }
+
+      .hi-slide > ul > li > img {
+        width: 100%;
+        height: 100%;
+        background-position: center;
+      }
+
+      .supplier_activation_footer_text {
+        background-color: #c7c7b9;
+      }
+      .supplier_activation_header_text {
+        background-color: #f03a3a;
+      }
+
+      .page_header_text {
+        font-family: 'Helvetica', 'Arial', ' Verdana';
+        color: #ffffff;
+        font-size: 25px;
+        text-align: center;
+        padding: 30px;
+        margin-bottom: 30px;
+      }
+
+      .page_footer_text {
+        font-family: 'Helvetica', 'Arial', ' Verdana';
+        color: #ffffff;
+        font-size: 15px;
+        text-align: center;
+        padding: 30px;
+        margin-bottom: 30px;
+      }
+      .sign-in-link {
+        color: #ff8456;
+        font-size: 0.6em;
+        text-align: center;
+        text-decoration: none;
+        color: var(--clr_text, #ffffff);
+        margin: 10px 30px;
+        cursor: pointer;
+      }
+      .w3-lobster {
+        font-family: 'Lobster', serif;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <<<<<<header>>>>>> -->
+    <header id="home">
+      <!-- <<<<<<navbar>>>>>> -->
+      <nav class="navbar" id="nav">
+        <div class="nav-center">
+          <!-- nav header  -->
+          <div class="nav-header">
+            <a href="#home">
+              <img
+                src="../assets/logo.svg"
+                alt="Fitgeneixlogo"
+                class="nav-logo"
+              />
+            </a>
+            <button
+              type="button"
+              class="nav-toggle"
+              id="nav-toggle"
+              aria-label="nav-toggler"
+            >
+              <i class="fas fa-bars"></i>
+            </button>
+          </div>
+          <!-- end of navbar header  -->
+          <!-- navbar links  -->
+          <div class="links-container">
+            <div class="nav-links">
+              <a href="../../index.html" class="nav-link scroll-link">Home</a>
+              <a href="./mainpage.html" class="nav-link scroll-link"
+                >Diet</a
+              >
+              <a href="../../store.html" class="nav-link scroll-link">Store</a>
+              <a href="./signin.html" class="nav-link scroll-link"
+                >Login</a
+              >
+            </div>
+          </div>
+          <!-- end of nav bar links  -->
+          <!-- nav social  -->
+          <div class="nav-icons">
+            <a href="https://www.facebook.com" target="_blank">
+              <i class="fab fa-facebook nav-icon"></i>
+            </a>
+
+            <a href="https://www.twitter.com" target="_blank">
+              <i class="fab fa-twitter nav-icon"></i>
+            </a>
+
+            <a href="https://www.instagram.com" target="_blank">
+              <i class="fab fa-instagram nav-icon"></i>
+            </a>
+          </div>
+        </div>
+      </nav>
+    <!--<<<<<<<<<<< OLD NAVBAR>>>>>>>>>>>> -->
+    <!-- <div class="supplier_activation_header_text page_header_text">
+<table>
+    <col width="300" height="200"/>   
+    <col width="700" height="200"/>
+    <col width="300" height="200"/>
+    <col width="50" height="200"/>
+    <tbody>
+<tr>
+    <td>
+
+<img src="../assets/logo.svg" class="element.style" style="height:70px;background-color: #333">
+</td>
+<td>
+<h2>
+  <div class="w3-container w3-lobster">
+<p class="w3-xxxlarge" style="color:white;">Fitgenix Diet Plan</p>
+</div>
+
+</td>
+<td>
+<a style="color:white;" href="./signin.html" class="sign-in-link" onclick="UrlFunctions.addNextUrlParameter(this)"><b>Already a member? Sign in.</b></a>
+</td>
+<td>
+<a style="color:white;" class="sign-in-link" href="./signuppage.html"> <b>Signup</b></a>
+</td>
+</tr>
+</tbody>
+</table>
+            </div>    -->
+
+    <div class="slide hi-slide">
+      <div class="hi-prev"></div>
+      <div class="hi-next"></div>
+      <ul>
+        <li>
+          <img src="../assets/13.png" alt="Img 1" />
+        </li>
+        <li><img src="../assets/15.png" alt="Img 2" /></li>
+        <li><img src="../assets/20.png" alt="Img 3" /></li>
+        <li><img src="../assets/7.png" alt="Img 4" /></li>
+        <li><img src="../assets/18.png" alt="Img 5" /></li>
+        <li><img src="../assets/19.png" alt="Img 6" /></li>
+        <li><img src="../assets/8.png" alt="Img 7" /></li>
+      </ul>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.hislide.js"></script>
+    <script>
+      $('.slide').hiSlide();
+    </script>
+    <div class="container">
+      <!--image row start-->
+      <div class="row">
+        <!--image card start-->
+        <div class="image">
+          <img src="../assets/food1.jpg" alt="" />
+          <div class="details">
+            <h2><span>Browse Food</span></h2>
+            <div class="w3-container w3-lobster">
+              <p style="background-color: white; color: red" class="w3-xxlarge">
+                Here are some of our delicious diet recipe you can easily make
+                at home.
+              </p>
+            </div>
+            <div class="more">
+              <a href="./browsefood.html" class="read-more"
+                >Read <span>More</span></a
+              >
+            
+            </div>
+          </div>
+        </div>
+        <!--image card end-->
+        <!--image card start-->
+        <div class="image">
+          <img src="../assets/21.png" alt="" />
+          <div class="details">
+            <h2><span>MANAGE WEIGHT</span></h2>
+            <div class="w3-container w3-lobster">
+              <p style="background-color: white; color: red" class="w3-xxlarge">
+                Whether your aim is to reach or maintain a healthy weight, these
+                evidence-based programs will help you achieve your goal.
+              </p>
+            </div>
+            <div class="more">
+              <a href="#" class="read-more">Read <span>More</span></a>
+              
+            </div>
+          </div>
+        </div>
+        <!--image card end-->
+        <!--image card start-->
+        <div class="image">
+          <img src="../assets/11.png" alt="" />
+          <div class="details">
+            <h2><span>LIVE WELL</span></h2>
+            <div class="w3-container w3-lobster">
+              <p style="background-color: white; color: red" class="w3-xxlarge">
+                Get the information, motivation and support you need to live
+                your best life, no matter where you are in your health journey.
+              </p>
+            </div>
+            <div class="more">
+              <a href="#" class="read-more">Read <span>More</span></a>
+              
+            </div>
+          </div>
+        </div>
+        <!--image card end-->
+      </div>
+      <!--image row end-->
+      <!--image row start-->
+      <div class="row">
+        <!--image card start-->
+        <div class="image">
+          <img src="../assets/yoga.jpg" alt="" />
+          <div class="details">
+            <h2><span>FITNESS</span></h2>
+            <div class="w3-container w3-lobster">
+              <p style="background-color: white; color: red" class="w3-xxlarge">
+                All progress takes place outside the comfort zone
+              </p>
+            </div>
+            <div class="more">
+              <a href="#" class="read-more">Read <span>More</span></a>
+              
+            </div>
+          </div>
+        </div>
+        <!--image card end-->
+        <!--image card start-->
+        <div class="image">
+          <img src="../assets/work.jpg" alt="" />
+          <div class="details">
+            <h2><span>WORKOUT MEALS</span></h2>
+            <div class="w3-container w3-lobster">
+              <p style="background-color: white; color: red" class="w3-xxlarge">
+                You can have your cake and lose weight, too!
+              </p>
+            </div>
+            <div class="more">
+              <a href="#" class="read-more">Read <span>More</span></a>
+              
+            </div>
+          </div>
+        </div>
+        <!--image card end-->
+        <!--image card start-->
+        <div class="image">
+          <img src="../assets/contact.png" alt="" />
+          <div class="details">
+            <h2><span>Contact Us</span></h2>
+            <div class="w3-container w3-lobster">
+              <p
+                style="background-color: white; color: red"
+                class="w3-xxlarge"
+              ></p>
+            </div>
+            <div class="more">
+              <a href="#" class="read-more">Read <span>More</span></a>
+              
+            </div>
+          </div>
+        </div>
+        <!--image card end-->
+      </div>
+      <!--image row end-->
+    </div>
+    <!--image card layout end-->
+    <footer>
+      <div
+        class="supplier_activation_footer_text page_footer_text"
+        style="background-color: #333"
+      >
+        <img
+          src="../assets/logo.svg"
+          class="element.style"
+          style="height: 70px"
+        />
+        <br />
+        <p style="color: red">Copyright @2020 Fitgenix,inc</p>
+        <a href="#" style="color: #ffffff">Legal Stuff | </a>
+        <a href="#" style="color: #ffffff">Privacy Policy</a>
+      </div>
+    </footer>
+    <script src="../js/app.js"></script>
+  </body>
+</html>

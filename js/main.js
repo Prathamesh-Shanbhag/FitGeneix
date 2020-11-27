@@ -58,6 +58,7 @@ window.addEventListener('load', function () {
 });
 
 // <<<<<<<<<<Hero Typing End>>>>>>>>
+
 // ScrollTrigger
 const reveal = gsap.utils.toArray('.reveal');
 reveal.forEach((text, i) => {
@@ -129,6 +130,10 @@ window.addEventListener('scroll', function () {
     topLink.classList.remove('show-link');
   }
 });
+
+// *********Footer Responsive Date********
+const date = document.getElementById('date');
+date.innerHTML = new Date().getFullYear();
 
 // ********** smooth scroll ************
 // select links
