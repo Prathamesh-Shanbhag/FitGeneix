@@ -622,13 +622,14 @@ a {
   width: 100%;
   min-height: 100vh;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
-  flex-direction: row;
+  flex-direction: column;
 }
 .facility-card {
-  margin-bottom: 7rem;
-  max-width: 33.33%;
+  margin: 0px 3rem;
+  margin-bottom: 5rem;
+  max-width: 100%;
 }
 
 .facilities-container {
@@ -668,7 +669,7 @@ a {
   font-family: 'Russo One';
   color: var(--mainWhite);
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.5rem;
   position: relative;
   transform-origin: left;
   transform: scaleX(0);
@@ -682,7 +683,7 @@ a {
 }
 .reveal:nth-child(2) {
   font-weight: 300;
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 .reveal:nth-child(2)::before {
   background: #2196f3;
@@ -707,7 +708,9 @@ a {
   color: var(--mainWhite);
   margin-bottom: 1.5rem;
 }
+
 .sub-text:nth-child(3) {
+  margin-top: 1rem;
 }
 
 .facilities-img {
@@ -725,21 +728,25 @@ a {
   left: 0;
 }
 /* For Bigger Window */
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 800px) {
+  .facility-card {
+    margin: 0px;
+    margin-bottom: 7rem;
+    max-width: 30%;
+  }
   .facilities-center {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
+    flex-direction: row;
   }
   .facilities-img {
     max-width: 800px;
   }
 }
-/* @media screen and (min-width: 1170px) {
-} */
 
-/* footer section */
+/* footer section >>>>>>>>>>>>>>>*/
 .footer {
   font-family: 'Poppins', sans-serif;
   display: flex;
