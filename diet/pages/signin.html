@@ -9,10 +9,12 @@
      <!-- particles background -->
      <div id="particles-js"></div>
   <div class="login">
+    <a href="../../index.html">
   <img class="login__logo" src="../assets/logo.svg" />
+  </a>
 
   <div class="login__container">
-    <h1>Sign-In</h1>
+    <h1 class="login__title">Sign-In</h1>
     <form>
       <h5>E-mail</h5>
       <input type="text" placeholder="Email" />
@@ -22,23 +24,61 @@
       <br />
       <button class="login__SignInBtn" type="submit">Sign In</button>
     </form>
-    <p>
+    <h3 class="or_text">OR</h3>
+    <!-- Google Authentication Functionality -->
+      <section id="whenSignedOut">
+    <button class="login__google" id="signInBtn" >&nbsp; Sign in with Google</button>
+  </section>
+
+  <section id="whenSignedIn" hidden="true">
+    <div id="userDetails"></div>
+    <button id="signOutBtn" class="btn btn-primary">Sign Out</button>
+  </section>
+  <!-- End of Google Authentication Functionality -->
+  <p>
       By signing-in you agree to the Fitgeneix Conditions of Use & Sale. Please
       see our Privacy Notice, our Cookies Notice and our Interest-Based Ads
       Notice.
     </p>
-    <h3 class="or_text">OR</h3>
+    
     <button class="login__RegisterBtn">
      <a href="./signuppage.html">Create An FITGENEIX account</a> 
     </button>
   </div>
 </div>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-firestore.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyAhFo37vv7REY-WUSeAJWsTADUWXDYpNys",
+    authDomain: "fitgeneix.firebaseapp.com",
+    databaseURL: "https://fitgeneix-default-rtdb.firebaseio.com",
+    projectId: "fitgeneix",
+    storageBucket: "fitgeneix.appspot.com",
+    messagingSenderId: "499782774389",
+    appId: "1:499782774389:web:b237dc5515a98a1b5bd23c",
+    measurementId: "G-JJCZS1VW3F"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
 <script
       src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"
       type="javascript"
     ></script>
     <script src="../js/particles.js" type="text/javascript"></script>
     <script src="../js/app.js" type="text/javascript"></script>
+    <script src="../js/auth.js"></script>
 	
 
 </body>

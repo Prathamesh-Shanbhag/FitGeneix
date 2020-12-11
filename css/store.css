@@ -2,7 +2,7 @@
 *::before,
 *::after {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
@@ -34,23 +34,25 @@ p {
 .btn {
   display: inline-block;
   text-decoration: none;
-  padding: .5em 1.25em;
-  margin: .2em;
+  padding: 0.5em 1.25em;
+  margin: 0.2em;
   background: var(--clr_accent, #000000);
   color: var(--clr_text, #ffffff);
   font-weight: 700;
   text-transform: uppercase;
   font-size: 1.125rem;
-  border-radius: .25em;
-  -webkit-transition: opacity 175ms linear, -webkit-transform 250ms ease-in-out;
-  transition: opacity 175ms linear, -webkit-transform 250ms ease-in-out;
-  transition: transform 250ms ease-in-out, opacity 175ms linear;
-  transition: transform 250ms ease-in-out, opacity 175ms linear, -webkit-transform 250ms ease-in-out;
+  border-radius: 0.25em;
+  -webkit-transition: opacity 175ms linear, -webkit-transform 250ms ease-in-out;
+  transition: opacity 175ms linear, -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, opacity 175ms linear;
+  transition: transform 250ms ease-in-out, opacity 175ms linear,
+    -webkit-transform 250ms ease-in-out;
 }
 
-.btn:hover, .btn:focus {
+.btn:hover,
+.btn:focus {
   -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  transform: scale(1.1);
   opacity: 0.9;
 }
 
@@ -79,7 +81,7 @@ p {
 
 .slideUp {
   -webkit-animation: slideUp 2s ease;
-          animation: slideUp 2s ease;
+  animation: slideUp 2s ease;
 }
 
 nav {
@@ -129,8 +131,8 @@ nav .icon {
 
 @supports (background-blend-mode: soft-light) {
   .hero {
-    background: url(shoe-6.png), -webkit-gradient(linear, left top, left bottom, from(#012a77), to(#01013a));
-    background: url(shoe-6.png), linear-gradient(#012a77, #01013a);
+    background: url(../assets/images/shoe-6.png),
+      linear-gradient(#012a77, #01013a);
     background-blend-mode: soft-light;
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -140,13 +142,13 @@ nav .icon {
 
 .hero p {
   -webkit-animation: slideUp 3s ease;
-          animation: slideUp 3s ease;
+  animation: slideUp 3s ease;
   margin: 10px;
 }
 
 .hero a {
   -webkit-animation: slideUp 4s ease;
-          animation: slideUp 4s ease;
+  animation: slideUp 4s ease;
 }
 
 .hero i {
@@ -174,7 +176,7 @@ nav .icon {
   display: block;
   position: relative;
   -webkit-transform: scale(0.85);
-          transform: scale(0.85);
+  transform: scale(0.85);
   -webkit-transition: -webkit-transform 250ms ease-in-out;
   transition: -webkit-transform 250ms ease-in-out;
   transition: transform 250ms ease-in-out;
@@ -185,12 +187,14 @@ nav .icon {
   line-height: 1.2;
 }
 
-.featured_item:hover, .featured_item:focus {
+.featured_item:hover,
+.featured_item:focus {
   -webkit-transform: scale(1);
-          transform: scale(1);
+  transform: scale(1);
 }
 
-.featured_item:hover .featured_details, .featured_item:focus .featured_details {
+.featured_item:hover .featured_details,
+.featured_item:focus .featured_details {
   opacity: 1;
   text-shadow: 0 0 2em white;
 }
@@ -218,7 +222,8 @@ nav .icon {
   font-size: 2.5rem;
 }
 
-.prev, .next {
+.prev,
+.next {
   cursor: pointer;
   position: absolute;
   top: 50%;
@@ -232,9 +237,9 @@ nav .icon {
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
   -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .prev {
@@ -248,7 +253,8 @@ nav .icon {
 }
 
 /* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
+.prev:hover,
+.next:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
@@ -264,20 +270,21 @@ nav .icon {
   transition: background-color 0.6s ease;
 }
 
-.active, .dot:hover {
+.active,
+.dot:hover {
   background-color: #717171;
 }
 
 .fade {
   -webkit-animation-name: fade;
-          animation-name: fade;
+  animation-name: fade;
   -webkit-animation-duration: 1.5s;
-          animation-duration: 1.5s;
+  animation-duration: 1.5s;
 }
 
 @-webkit-keyframes fade {
   from {
-    opacity: .4;
+    opacity: 0.4;
   }
   to {
     opacity: 1;
@@ -286,7 +293,7 @@ nav .icon {
 
 @keyframes fade {
   from {
-    opacity: .4;
+    opacity: 0.4;
   }
   to {
     opacity: 1;
@@ -298,9 +305,9 @@ nav .icon {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   -ms-grid-rows: 50vh 50vh;
-      grid-template-rows: 50vh 50vh;
+  grid-template-rows: 50vh 50vh;
 }
 
 .product_item {
@@ -309,14 +316,14 @@ nav .icon {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   background-color: #f0e9e9;
   margin: 10px;
 }
@@ -330,21 +337,21 @@ nav .icon {
 }
 
 .product .btn {
-  padding: 0.25em,0.65em;
+  padding: 0.25em, 0.65em;
   background-color: #cfb5b5;
 }
 
 @media (max-width: 900px) {
   .product .grid_items {
     -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 }
 
 @media (max-width: 450px) {
   .product .grid_items {
     -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
+    grid-template-columns: 1fr;
   }
 }
 
@@ -357,11 +364,11 @@ footer .footer_flex {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   margin-bottom: 2rem;
 }
 
@@ -370,8 +377,8 @@ footer p {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
   padding-left: 15px;
 }
 
@@ -390,22 +397,22 @@ footer i {
 @-webkit-keyframes slideUp {
   0% {
     -webkit-transform: translateY(180px);
-            transform: translateY(180px);
+    transform: translateY(180px);
   }
   100% {
     -webkit-transform: translateY(0);
-            transform: translateY(0);
+    transform: translateY(0);
   }
 }
 
 @keyframes slideUp {
   0% {
     -webkit-transform: translateY(180px);
-            transform: translateY(180px);
+    transform: translateY(180px);
   }
   100% {
     -webkit-transform: translateY(0);
-            transform: translateY(0);
+    transform: translateY(0);
   }
 }
 /*# sourceMappingURL=store.css.map */

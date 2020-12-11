@@ -1,5 +1,4 @@
 // <<<<<<<<<<<<<<<<hero typing>>>>>>>>>>
-
 const typedTextSpan = document.querySelector('.typed-text');
 const cursorSpan = document.querySelector('.cursor');
 

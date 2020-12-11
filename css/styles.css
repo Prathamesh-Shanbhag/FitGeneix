@@ -95,7 +95,7 @@ a {
   color: var(--primaryCol);
   background: transparent;
   outline-offset: 3px;
-  transform: translatex(5px);
+  transform: translatey(5px);
 }
 
 .btn-white:hover {
@@ -397,7 +397,7 @@ a {
 }
 
 /* <<<<option for mobile screen to not load video >>>> */
-/* @media screen and (max-width: 767px) {
+@media screen and (max-width: 767px) {
   #videoBG {
     display: none;
   }
@@ -405,7 +405,7 @@ a {
     background: url('poster.jpg');
     background-size: cover;
   }
-} */
+}
 
 @media screen and (min-width: 768px) {
   .hero-title {
@@ -651,7 +651,8 @@ a {
 }
 /* center icon  */
 .detail-icon {
-  color: var(--primaryCol);
+  /* color: var(--primaryCol); */
+  color: #e3fa12;
   font-size: 6rem;
   position: absolute;
   top: 50%;
@@ -659,7 +660,7 @@ a {
   transform: translate(-50%, -50%);
   opacity: 0;
   transition: var(--mainTransition);
-  transition-delay: 0.5s;
+  transition-delay: 0.2s;
 }
 /* all classes with active are scrollTrigger */
 .detail-icon.active {
@@ -746,22 +747,22 @@ a {
   }
 }
 
-/*<<<<<<<<<<<<<<< Diet section >>>>>>>>>>>>>>>>> */
-.diet {
+/*<<<<<<<<<<<<<<< Store section >>>>>>>>>>>>>>>>> */
+.store {
   position: relative;
   width: 100%;
-  min-height: 100vh;
+  min-height: 60vh;
 }
 
-.diet .imgBx {
+.store .imgBx {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 60%;
   height: 100%;
 }
 
-.diet .imgBx img {
+.store .imgBx img {
   position: absolute;
   top: 0;
   left: 0;
@@ -775,25 +776,25 @@ a {
 }
 
 .section_fix {
-  padding: 8rem 5rem;
+  padding: 5rem;
   background: #232427;
 }
 
-.diet .imgBx img.active {
+.store .imgBx img.active {
   opacity: 1;
 }
 
 .controls {
   position: absolute;
-  top: 50%;
+  top: 85%;
   transform: translateY(-50%);
-  right: 0;
+  right: 39%;
   width: 80px;
 }
 .controls li {
   position: relative;
-  width: 80px;
-  height: 80px;
+  width: 71px;
+  height: 71px;
   background: #fff;
   list-style: none;
   display: flex;
@@ -818,8 +819,49 @@ a {
 .controls li:nth-child(2)::before {
   transform: rotate(225deg);
 }
+/**********************about**************************/
 
-/*<<<<<<<<<<<<< End of Diet Section >>>>>>>>>>>>> */
+.about-info,
+.about-img {
+  margin-bottom: 4rem;
+  color: white;
+}
+.about-info {
+  position: relative;
+  top: 0;
+  left: 65%;
+}
+
+.info-title {
+  text-transform: uppercase;
+}
+@media screen and (min-width: 992px) {
+  .about-center {
+    display: flex;
+    justify-content: space-between;
+  }
+  .about-info,
+  .about-img {
+    flex: 0 0 calc(50% - 2rem);
+    margin-bottom: 0;
+  }
+}
+@media screen and (min-width: 1170px) {
+  .about-img::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 0.5rem solid var(--primaryCol);
+    top: -1.5rem;
+    left: -1.5rem;
+  }
+  .about-img {
+    position: relative;
+  }
+}
+/**********************end of about**************************/
+/*<<<<<<<<<<<<< End of Store Section >>>>>>>>>>>>> */
 
 /*<<<<<<<<<<<<<<<<<<<<<<<<< footer section >>>>>>>>>>>>>>>*/
 .footer {
@@ -827,7 +869,7 @@ a {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   flex-direction: column;
   background: #ede7f6;
 }
@@ -837,7 +879,7 @@ a {
   height: auto;
   padding: 50px 100px;
   background: #111;
-  display: flex;
+  /* display: flex; */
   justify-content: space-between;
   flex-wrap: wrap;
 }
