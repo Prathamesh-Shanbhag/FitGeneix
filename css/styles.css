@@ -862,6 +862,97 @@ a {
 }
 /**********************end of about**************************/
 /*<<<<<<<<<<<<< End of Store Section >>>>>>>>>>>>> */
+/*<<<<<<<<<<<<< Statistics Counter Section >>>>>>>>>>>>> */
+.stats {
+  background-color: #000;
+  height: 50%;
+}
+.row {
+  visibility: collapse;
+  height: 0;
+}
+.show_stats {
+  visibility: visible;
+  height: auto;
+  transition: all 2s ease-in;
+}
+.stats_btn {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+#circleBar {
+  text-align: center;
+  font-family: tahoma;
+}
+#circleBar .round {
+  min-height: 225px;
+  margin-top: 30px;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+#circleBar .round strong {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -50px;
+  transform: translate(-50%);
+  font-size: 40px;
+  color: #ffffff;
+  font-weight: 100;
+}
+
+#circleBar span {
+  display: block;
+  color: #999;
+  font-size: 17px;
+  margin-top: 10px;
+}
+.stats_title {
+  font-family: 'Russo-One';
+  display: block;
+  color: var(--primaryCol);
+  font-size: 2.6rem;
+  margin-top: 10px;
+}
+
+#circleBar span i {
+  color: #ff5c5c;
+  font-size: 22px;
+  margin-right: 7px;
+}
+
+section button:hover {
+  background-color: var(--primaryCol);
+}
+.circle_container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 25%;
+}
+.row {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 20px;
+}
+@media (min-width: 800px) {
+  .col-md-3 {
+    grid-column: span 3;
+  }
+}
+@media (min-width: 800px) {
+  .circle_container {
+    width: 100%;
+  }
+}
+
+/*<<<<<<<<<<<<< ENd OF Statistics Counter Section >>>>>>>>>>>>> */
 
 /*<<<<<<<<<<<<<<<<<<<<<<<<< footer section >>>>>>>>>>>>>>>*/
 .footer {
@@ -877,7 +968,7 @@ a {
   position: relative;
   width: 100%;
   height: auto;
-  padding: 50px 100px;
+  padding: 50px 100px 10px 100px;
   background: #111;
   /* display: flex; */
   justify-content: space-between;
@@ -991,6 +1082,10 @@ a {
 
 .info li a:hover {
   color: var(--mainWhite);
+}
+
+.contact_text {
+  color: #999;
 }
 
 .copyright_text {

@@ -12,7 +12,7 @@ var pJS = function (tag_id, params) {
     },
     particles: {
       number: {
-        value: 400,
+        value: 600,
         density: {
           enable: true,
           value_area: 800,
@@ -80,7 +80,7 @@ var pJS = function (tag_id, params) {
       array: [],
     },
     interactivity: {
-      detect_on: 'canvas',
+      detect_on: 'window',
       events: {
         onhover: {
           enable: true,
@@ -105,7 +105,7 @@ var pJS = function (tag_id, params) {
           duration: 0.4,
         },
         repulse: {
-          distance: 200,
+          distance: 50,
           duration: 0.4,
         },
         push: {

@@ -6,9 +6,9 @@
     <link rel="stylesheet" href="../signup.css">
     <link rel="stylesheet" href="./particles.css">
    <body>
+<div id="particles-js"></div>
      <!-- particles background -->
-     <div id="particles-js"></div>
-  <div class="login">
+  <div class="login" id="main_section">
     <a href="../../index.html">
   <img class="login__logo" src="../assets/logo.svg" />
   </a>
@@ -32,7 +32,7 @@
 
   <section id="whenSignedIn" hidden="true">
     <div id="userDetails"></div>
-    <button id="signOutBtn" class="btn btn-primary">Sign Out</button>
+    <button id="signOutBtn" class="login__SignInBtn">Sign Out</button>
   </section>
   <!-- End of Google Authentication Functionality -->
   <p>
@@ -45,6 +45,7 @@
      <a href="./signuppage.html">Create An FITGENEIX account</a> 
     </button>
   </div>
+  
 </div>
 <!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>
@@ -72,10 +73,7 @@
   firebase.initializeApp(firebaseConfig);
   firebase.analytics();
 </script>
-<script
-      src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"
-      type="javascript"
-    ></script>
+
     <script src="../js/particles.js" type="text/javascript"></script>
     <script src="../js/app.js" type="text/javascript"></script>
     <script src="../js/auth.js"></script>

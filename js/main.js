@@ -181,3 +181,11 @@ function prevSlide() {
   i = (i - 1 + slides.length) % slides.length;
   slides[i].classList.add('active');
 }
+
+// Statistics Section
+
+const statsBtn = document.querySelector('.stats_btn');
+const row = document.querySelector('.row');
+statsBtn.addEventListener('click', function () {
+  row.classList.toggle('show_stats');
+});

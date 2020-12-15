@@ -21,7 +21,7 @@ auth.onAuthStateChanged((user) => {
     // signed in
     whenSignedIn.hidden = false;
     whenSignedOut.hidden = true;
-    window.location = './index.html';
+    redirect_Page();
     userDetails.innerHTML = `<h3>Hello ${user.displayName}!</h3> <p>User ID: ${user.uid}</p> <a href="../../index.html"><button class="login__SignInBtn">Take me back to homepage</button></a>`;
   } else {
     // not signed in
@@ -30,3 +30,10 @@ auth.onAuthStateChanged((user) => {
     userDetails.innerHTML = '';
   }
 });
+
+function redirect_Page() {
+  var tID = setTimeout(function () {
+    window.location.href = 'https://fitgeneix.web.app/';
+    window.clearTimeout(tID); // clear time out.
+  }, 20000);
+}

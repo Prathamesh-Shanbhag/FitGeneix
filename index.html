@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="./css/styles.css" />
     <!-- favicon  -->
     <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,300,600,800,900" rel="stylesheet" type="text/css">
+
   </head>
 
   <body>
@@ -84,7 +86,7 @@
             <span class="cursor typing">&nbsp;</span>
           </h1>
           <p class="hero-text"></p>
-          <a href="#workouts" class="btn-white scroll-link">explore workouts</a>
+          <a href="#facilities" class="btn-white scroll-link">explore workouts</a>
         </div>
       </div>
     </header>
@@ -184,7 +186,7 @@
     </section>
     <!-- end of services section  -->
     <!-- ScrollTrigger facilities section  -->
-    <section class="section facilities clearfix">
+    <section class="section facilities clearfix" id="facilities">
       <!-- title  -->
       <div class="title-wrapper">
         <h2 class="title">Our<span class="subtitle">Facilities</span></h2>
@@ -350,27 +352,143 @@
         </ul>
         <!-- text about  -->
       <article class="about-info">
-        <h3 class="info-title">explore the difference</h3>
+        <h3 class="info-title">explore the difference.</h3>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum,
-          facere iusto molestiae laboriosam quo quae id natus eius nam
-          corrupti!
+          Our mission is what drives us to do everything possible to expand human potential. We do that by creating groundbreaking sport innovations, by making our products more sustainably, by building a creative and diverse global team and by making a positive impact in communities where we live and work.
         </p>
 
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum,
-          facere iusto molestiae laboriosam quo quae id natus eius nam
-          corrupti!
+          We believe in the power of sport to unite everyone and to inspire people to take action in their communities. We are committed to creating an inclusive culture at FitGeneix and breaking down barriers for all athletes.
         </p>
         <a href="#" class="btn-primary">Read More</a>
       </article>
       </section>
       
     </div>
-      
+      <!-- END OF STORE SECTION  -->
+ 
+        
+      <section class="clearfix stats section" id="circleBar">
+      <!-- title  -->
+      <div class="title-wrapper">
+        <h2 class="stats_title">
+          OUR RECENT<span class="subtitle">STATISTICS</span>
+        </h2>
+      </div>
+      <div class="stats_btn">
+        <button class="btn-primary" onclick="allCircle('.round')" >View Statistics</button>
+        </div>
 
-  
+      <div class="circle_container section-center">
+        <div class="row">
+          <div class="col-md-3">
+            <div
+              class="round circle-1"
+              data-value="1.00"
+              data-size="200"
+              data-thickness="6"
+            >
+              <strong></strong>
+              <span><i class="fa fa-user-check"></i>Satisfied Clients</span>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div
+              class="round circle-2"
+              data-value="0.65"
+              data-size="200"
+              data-thickness="6"
+            >
+              <strong></strong>
+              <span><i class="fa fa-utensils"></i>Recipies Library</span>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div
+              class="round circle-3"
+              data-value="0.75"
+              data-size="200"
+              data-thickness="6"
+            >
+              <strong></strong>
+              <span><i class="fa fa-dumbbell"></i>Workout Programs</span>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div
+              class="round circle-4"
+              data-value="1.00"
+              data-size="200"
+              data-thickness="6"
+            >
+              <strong></strong>
+              <span><i class="fa fa-comments"></i>Client Testimonials</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+      function allCircle() {
+        Circle('.circle-1');
+        Circle1('.circle-2');
+        Circle2('.circle-3');
+        Circle3('.circle-4');
+      }
+//       $('.demo').circleProgress({
+// value: 0.0,
+// size: 100.0,
+// startAngle: -Math.PI,
+// thickness: 'auto',
+// fill: {
+//   gradient: ['#3aeabb', '#fdd250']
+// },
+// emptyFill: 'rgba(0, 0, 0, .1)',
+// animation: {
+//   duration: 1200,
+//   easing: 'circleProgressEasing'
+// },
 
+      function Circle(el) {
+        $(el)
+          .circleProgress({
+            fill: { color: '#cc0014' },
+emptyFill: 'rgb(255,255,255,1)',
+          })
+          .on('circle-animation-progress', function (event, progress) {
+            $(this)
+              .find('strong')
+              .html(Math.round(2450 * progress) + '<i>+</i>');
+          });
+      }
+      function Circle1(el) {
+        $(el)
+          .circleProgress({ fill: { color: '#cc0014' },emptyFill: 'rgb(255,255,255,1)' })
+          .on('circle-animation-progress', function (event, progress) {
+            $(this)
+              .find('strong')
+              .html(Math.round(560 * progress) + '<i>+</i>');
+          });
+      }
+      function Circle2(el) {
+        $(el)
+          .circleProgress({ fill: { color: '#cc0014' },emptyFill: 'rgb(255,255,255,1)' })
+          .on('circle-animation-progress', function (event, progress) {
+            $(this)
+              .find('strong')
+              .html(Math.round(1000 * progress) + '<i>+</i>');
+          });
+      }
+      function Circle3(el) {
+        $(el)
+          .circleProgress({ fill: { color: '#cc0014' },emptyFill: 'rgb(255,255,255,1)' })
+          .on('circle-animation-progress', function (event, progress) {
+            $(this)
+              .find('strong')
+              .html(Math.round(100 * progress) + '<i>+</i>');
+          });
+      }
+    </script>
       <!-- Footer Section -->
     </section>
     <footer class="clearfix footer">
@@ -439,9 +557,18 @@
               <li>
                 <span><i class="fa fa-envelope" aria-hidden="true"></i></span>
                 <p>
-                  <a href="mailto:knowmore@email.com"
-                    >mailto:knowmore@email.com</a
-                  >
+                  <form action="https://formspree.io/f/xqkgywny" method="post">
+                    <div class="email">
+                      <div class="contact_text">Email*</div>
+                      <input name="Email" style="height: 2rem;" type="email" required>
+                    </div>
+                    <div class="contact_message"></div>
+                    <div class="contact_text">Enquiry Message *</div>
+                    <textarea name="message" id="" cols="25" rows="3" required></textarea>
+                    <div >
+                      <button  class="btn-primary" type="submit">Submit</button>
+                    </div>
+                  </form>
                 </p>
               </li>
             </ul>
@@ -468,8 +595,15 @@
     <!-- ScrollTrigger -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
-
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  
     <script src="./js/main.js" defer></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery-circle-progress/1.2.2/circle-progress.min.js"
+      integrity="sha512-6kvhZ/39gRVLmoM/6JxbbJVTYzL/gnbDVsHACLx/31IREU4l3sI7yeO0d4gw8xU5Mpmm/17LMaDHOCf+TvuC2Q=="
+      crossorigin="anonymous"
+    ></script>
 
   </body>
 </html>
