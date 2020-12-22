@@ -12,6 +12,7 @@ const userDetails = document.getElementById('userDetails');
 const provider = new firebase.auth.GoogleAuthProvider();
 
 /// Sign in using event handlers
+// G-mail Sign in
 
 signInBtn.onclick = () => auth.signInWithPopup(provider);
 
@@ -37,3 +38,40 @@ function redirect_Page() {
     window.clearTimeout(tID); // clear time out.
   }, 20000);
 }
+
+const signUpFunction = () => {
+  // Email-ID password Signin
+  const mailField = document.getElementById('mail');
+  const passwordField = document.getElementById('password');
+  const signUp = document.getElementById('signUp');
+  String;
+  email = mailField.value;
+  const password = passwordField.value;
+
+  //Built in firebase function responsible for signing up a user
+  firebase
+    .auth()
+    .signInWithEmailAndPassword(email, password)
+    .then(() => {
+      console.log('Signed Up Successfully !');
+      window.location.href = 'https://fitgeneix.web.app/';
+    })
+    .catch((error) => {
+      console.error(error);
+    });
+  signUp.addEventListener('click', signUpFunction());
+};
+
+// const sendVerificationEmail = () => {
+//   //Built in firebase function responsible for sending the verification email
+//   auth.currentUser
+//     .sendEmailVerification()
+//     .then(() => {
+//       console.log('Verification Email Sent Successfully !');
+//       //redirecting the user to the profile page once everything is done correctly
+//       window.location.assign('https://fitgeneix.web.app/');
+//     })
+//     .catch((error) => {
+//       console.error(error);
+//     });
+// };
